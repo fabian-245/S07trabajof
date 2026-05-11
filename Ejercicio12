@@ -1,19 +1,27 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Ejercicio12 : MonoBehaviour
 {
     public int[] daños = { 10, 15, 20, 5, 30 };
-    int j = 0;
-    int dañoTotal = 0;
     void Start()
     {
-        while (j < daños.Length)
         {
-            dañoTotal += daños[j];
-            j++;
+            int totalDamage = CalculateTotalDamage(daños);
+            Debug.Log("Daño total recibido: " + totalDamage);
         }
 
-        Debug.Log("Daño total recibido: " + dañoTotal);
+        int CalculateTotalDamage(int[] damageArray)
+        {
+            int total = 0;
+
+            foreach (int damage in damageArray)
+            {
+                total += damage;
+            }
+
+            return total;
+        }
     }
     void Update()
     {
