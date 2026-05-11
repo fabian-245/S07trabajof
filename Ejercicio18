@@ -1,0 +1,32 @@
+using UnityEngine;
+
+public class Ejercicio18 : MonoBehaviour
+{
+    int opcionMenu = 0;
+    void Start()
+    {
+        do
+        {
+            Debug.Log("=== TIENDA ===");
+            Debug.Log("1. Armas");
+            Debug.Log("2. Armaduras");
+            Debug.Log("3. Salir");
+
+            opcionMenu = 3;
+
+            int categoria = 1;
+
+            do
+            {
+                Debug.Log("Mostrando categoría " + categoria);
+                categoria++;
+            } 
+            while (categoria <= 2);
+        } 
+        while (opcionMenu != 3);
+    }
+    void Update()
+    {
+        
+    }
+}
