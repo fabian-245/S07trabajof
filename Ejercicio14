@@ -1,0 +1,28 @@
+using UnityEngine;
+
+public class Ejercicio14 : MonoBehaviour
+{
+    public string[] objetos = {"Pocion", "Escudo", "Espada Legendaria", "Arco" };
+    int l = 0;
+    bool encontrado = false;
+    void Start()
+    {
+        while (l < objetos.Length && !encontrado)
+        {
+            Debug.Log("Revisando objeto: " + objetos[l]);
+
+            if (objetos[l] == "Espada Legendaria")
+            {
+                Debug.Log("¡Item raro encontrado!");
+                encontrado = true;
+            }
+
+            l++;
+        }
+
+    }
+    void Update()
+    {
+        
+    }
+}
