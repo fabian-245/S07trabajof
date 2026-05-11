@@ -1,0 +1,26 @@
+using UnityEngine;
+
+public class Ejercicio16 : MonoBehaviour
+{
+    int ronda = 1;
+    void Start()
+    {
+        while (ronda <= 3)
+        {
+            Debug.Log("=== Ronda " + ronda + " ===");
+
+            int enemigos = 1;
+
+            while (enemigos <= 3)
+            {
+                Debug.Log("Enemigo " + enemigos + " generado");
+                enemigos++;
+            }
+            ronda++;
+        }
+    }
+    void Update()
+    {
+        
+    }
+}
