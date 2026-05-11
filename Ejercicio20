@@ -1,0 +1,25 @@
+using UnityEngine;
+
+public class Ejercicio20 : MonoBehaviour
+{
+    int fila = 0;
+    void Start()
+    {
+        while (fila < 5)
+        {
+            int columna = 0;
+            string linea = "";
+            while (columna < 5)
+            {
+                linea += "[X]";
+                columna++;
+            }
+            Debug.Log(linea);
+            fila++;
+        }
+    }
+    void Update()
+    {
+        
+    }
+}
