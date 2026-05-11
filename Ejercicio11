@@ -6,11 +6,16 @@ public class Ejercicio11 : MonoBehaviour
     int i = 0;
     void Start()
     {
+        int sumT = 0;
         while (i < puntajes.Length)
         {
             Debug.Log("Puntaje: " + puntajes[i]);
+            sumT += puntajes[i];
+            {
+                Debug.Log("Suma total: " + sumT);
+            }
             i++;
-        }
+        } 
     }
     void Update()
     {
