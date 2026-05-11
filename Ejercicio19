@@ -1,0 +1,36 @@
+using UnityEngine;
+
+public class Ejercicio19 : MonoBehaviour
+{
+    int vidaJugador = 100;
+    int vidaEnemigo = 100;
+    void Start()
+    {
+        while (vidaJugador > 0 && vidaEnemigo > 0)
+        {
+            // Ataque del jugador
+            vidaEnemigo -= 20;
+            Debug.Log("El jugador ataca. Vida enemigo: " + vidaEnemigo);
+
+            // Verificar si el enemigo sigue vivo
+            if (vidaEnemigo > 0)
+            {
+                vidaJugador -= 15;
+                Debug.Log("El enemigo ataca. Vida jugador: " + vidaJugador);
+            }
+        }
+        // Resultado final
+        if (vidaJugador > 0)
+        {
+            Debug.Log("¡El jugador ganó!");
+        }
+        else
+        {
+            Debug.Log("¡El enemigo ganó!");
+        }
+    }
+    void Update()
+    {
+        
+    }
+}
