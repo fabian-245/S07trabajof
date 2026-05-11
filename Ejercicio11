@@ -1,0 +1,19 @@
+using UnityEngine;
+
+public class Ejercicio11 : MonoBehaviour
+{
+    public int[] puntajes = { 100, 250, 400, 150, 300 };
+    int i = 0;
+    void Start()
+    {
+        while (i < puntajes.Length)
+        {
+            Debug.Log("Puntaje: " + puntajes[i]);
+            i++;
+        }
+    }
+    void Update()
+    {
+        
+    }
+}
