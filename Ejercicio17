@@ -1,0 +1,29 @@
+using UnityEngine;
+
+public class Ejercicio17 : MonoBehaviour
+{
+    int habitacion = 1;
+    void Start()
+    {
+        do
+        {
+            Debug.Log("Entrando a la habitación " + habitacion);
+
+            int enemigo = 1;
+
+            do
+            {
+                Debug.Log("Derrotando enemigo " + enemigo);
+                enemigo++;
+            } 
+            while (enemigo <= 2);
+            habitacion++;
+
+        } 
+        while (habitacion <= 3);
+    }
+    void Update()
+    {
+        
+    }
+}
