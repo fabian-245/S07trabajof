@@ -1,25 +1,23 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Ejercicio14 : MonoBehaviour
 {
-    public string[] objetos = {"Pocion", "Escudo", "Espada Legendaria", "Arco" };
-    int l = 0;
-    bool encontrado = false;
+    public List<string> inventario = new List<string>();
     void Start()
     {
-        while (l < objetos.Length && !encontrado)
+        inventario.Add("Poción");
+        inventario.Add("Escudo");
+        inventario.Add("Espada Legendaria");
+        inventario.Add("Anillo");
+        foreach(string item in inventario)
         {
-            Debug.Log("Revisando objeto: " + objetos[l]);
-
-            if (objetos[l] == "Espada Legendaria")
+            if (item == "Espada Legendaria")
             {
-                Debug.Log("¡Item raro encontrado!");
-                encontrado = true;
+                Debug.Log("¡Encontraste la Espada Legendaria!");
+                break;
             }
-
-            l++;
         }
-
     }
     void Update()
     {
